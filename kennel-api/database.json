@@ -1,76 +1,68 @@
 {
-    "animals": [
-        {
-            "id": 1,
-            "name": "Doodles",
-            "breed": "Poodle",
-            "customerId": 1,
-            "locationId": 2
-        },
-        {
-            "id": 2,
-            "name": "Bambino",
-            "breed": "Hound",
-            "customerId": 2,
-            "locationId": 2
-        },
-        {
-            "id": 3,
-            "name": "Joe Bob",
-            "breed": "Weiner Dog",
-            "customerId": 3,
-            "locationId": 1
-        }
-    ],
-    "customers": [
-        {
-            "id": 1,
-            "name": "Hannah Hall",
-            "address": "7002 Chestnut Ct"
-        },
-        {
-            "id": 2,
-            "name": "Phil Bill",
-            "address": "227 Awesome Ave"
-        },
-        {
-            "id": 3,
-            "name": "Jarmins Flack",
-            "address": "800 Bo St"
-        }
-    ],
-    "employees": [
-        {
-            "id": 1,
-            "name": "Chet Baker",
-            "locationId": 2
-        }, 
-        {
-          " id": 2,
-            "name": "Jim Cooper",
-            "locationId": 1
-        },
-        {
-          " id": 3,
-            "name": "Björk",
-            "locationId": 2
-        },
-        {
-          " id": 4,
-            "name": "Sam Samsonite",
-            "locationId": 1
-        }
-    ],
-    "locations": [
-        {
-            "id": 1,
-            "name": "Nashville North",
-            "address": "8422 Johnson Pike"
-        },
-        {
-            "id": 2,
-            "name": "Nashville South",
-            "address": "209 Emory Drive"
-        }
-    ]
+  "animals": [
+    {
+      "id": 1,
+      "name": "Doodles",
+      "breed": "Poodle",
+      "customerId": 1,
+      "locationId": 2
+    },
+    {
+      "id": 2,
+      "name": "Bambino",
+      "breed": "Hound",
+      "customerId": 2,
+      "locationId": 2
+    },
+    {
+      "id": 3,
+      "name": "Joe Bob",
+      "breed": "Weiner Dog",
+      "customerId": 3,
+      "locationId": 1
+    }
+  ],
+  "customers": [
+    {
+      "id": 1,
+      "name": "Hannah Hall",
+      "address": "7002 Chestnut Ct"
+    },
+    {
+      "id": 2,
+      "name": "Phil Bill",
+      "address": "227 Awesome Ave"
+    },
+    {
+      "id": 3,
+      "name": "Jarmins Flack",
+      "address": "800 Bo St"
+    }
+  ],
+  "employees": [
+    {
+      "name": "Guy",
+      "locationId": 1,
+      "animalId": 2,
+      "id": 3
+    },
+    {
+      "name": "Hal",
+      "locationId": 1,
+      "animalId": 1,
+      "id": 4
+    }
+  ],
+  "locations": [
+    {
+      "id": 1,
+      "name": "Nashville North",
+      "address": "8422 Johnson Pike"
+    },
+    {
+      "id": 2,
+      "name": "Nashville South",
+      "address": "209 Emory Drive"
+    }
+  ]
 }
