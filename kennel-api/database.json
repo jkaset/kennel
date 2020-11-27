@@ -51,6 +51,12 @@
       "locationId": 1,
       "animalId": 1,
       "id": 4
+    },
+    {
+      "name": "Mario",
+      "locationId": 2,
+      "animalId": 2,
+      "id": 5
     }
   ],
   "locations": [
