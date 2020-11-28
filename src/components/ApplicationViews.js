@@ -53,8 +53,8 @@ export const ApplicationViews = (props) => {
               props => <EmployeeList {...props} />
             } />
 
-            <Route exact path="/employees/create" render={
-              props => <EmployeeForm {...props} />
+            <Route path="/employees/:employeeId(\d+)" render={
+              props => <EmployeeDetail {...props} />
             } />
 
 
