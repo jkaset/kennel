@@ -1,12 +1,10 @@
 import React, { useContext, useEffect } from "react"
 import { EmployeeContext } from "./EmployeeProvider"
-import { Employee } from "./Employee"
+import { Link } from "react-router-dom"
 import "./Employee.css"
-//import { LocationContext } from "../location/LocationProvider"
 
-export const EmployeeList = (props) => {
+export const EmployeeList = props => {
   const { employees, getEmployees } = useContext(EmployeeContext)
-
 
   useEffect(() => {
     getEmployees()
@@ -15,9 +13,11 @@ export const EmployeeList = (props) => {
   return (
     <div className="employees">
       <h1>Employees</h1>
+
       <button onClick={() => props.history.push("/employees/create")}>
         Add Employee
-        </button>
+            </button>
+
       <article className="employeeList">
         {
           employees.map(employee => {
@@ -29,5 +29,4 @@ export const EmployeeList = (props) => {
       </article>
     </div>
   )
-
 }
