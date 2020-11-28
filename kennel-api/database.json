@@ -35,6 +35,12 @@
       "locationId": 2,
       "animalId": 1,
       "id": 1
+    },
+    {
+      "name": "Hansel",
+      "locationId": 2,
+      "animalId": 2,
+      "id": 2
     }
   ],
   "locations": [
