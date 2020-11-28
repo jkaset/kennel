@@ -1,5 +1,13 @@
 {
-  "animals": [],
+  "animals": [
+    {
+      "name": "Joss",
+      "breed": "Weinerdog",
+      "locationId": 2,
+      "customer": "Jas",
+      "id": 1
+    }
+  ],
   "customers": [
     {
       "email": "jas@jas.com",

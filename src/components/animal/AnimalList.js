@@ -5,7 +5,7 @@ import { CustomerContext } from "../customer/CustomerProvider"
 import { Animal } from "./Animal"
 import "./Animal.css"
 
-export const AnimalList = () => {
+export const AnimalList = (props) => {
   const { animals, getAnimals } = useContext(AnimalContext)
   const { locations, getLocations } = useContext(LocationContext)
   const { customers, getCustomers } = useContext(CustomerContext)
@@ -19,8 +19,12 @@ export const AnimalList = () => {
 
   return (
     <div className="animals">
-      {
-        animals.map(animal => {
+      <h1>Pet Registration</h1>
+      <button onClick={() => props.history.push("/animals/create")}>
+        Make Appointment
+      </button>
+      <article className="animalList">
+        {animals.map(animal => {
           const owner = customers.find(c => c.id === animal.customerId)
           const clinic = locations.find(l => l.id === animal.locationId)
 
@@ -28,8 +32,8 @@ export const AnimalList = () => {
             location={clinic}
             customer={owner}
             animal={animal} />
-        })
-      }
+        })}
+        </article>
     </div>
   )
 }
@@ -37,3 +41,17 @@ export const AnimalList = () => {
 
 
 
+
+    // <div className="animals">
+    //   {
+    //     animals.map(animal => {
+    //       const owner = customers.find(c => c.id === animal.customerId)
+    //       const clinic = locations.find(l => l.id === animal.locationId)
+
+    //       return <Animal key={animal.id}
+    //         location={clinic}
+    //         customer={owner}
+    //         animal={animal} />
+    //     })
+    //   }
+    // </div>
