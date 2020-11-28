@@ -25,16 +25,16 @@ export const AnimalForm = (props) => {
 
     const constructNewAnimal = () => {
         const locationId = parseInt(location.current.value)
-        const customerId = parseInt(customer.current.value)
+        //const customerId = parseInt(customer.current.value)
 
-        if (locationId === 0 && customerId === 0) {
+        if (locationId === 0) {
             window.alert("Please select a location")
         } else {
             addAnimal({
                 name: name.current.value,
                 breed: breed.current.value,
                 locationId,
-                customerId
+                customer: customer.current.value
             })
                 .then(() => props.history.push("/animals"))
         }

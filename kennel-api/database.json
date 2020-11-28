@@ -6,6 +6,13 @@
       "locationId": 2,
       "customer": "Jas",
       "id": 1
+    },
+    {
+      "name": "Paste",
+      "breed": "Lab",
+      "locationId": 1,
+      "customer": "Beef",
+      "id": 2
     }
   ],
   "customers": [
@@ -14,9 +21,22 @@
       "password": "jas",
       "name": "Jas Kas",
       "id": 1
+    },
+    {
+      "email": "beef@beef.com",
+      "password": "beef",
+      "name": "Beef Lasagna",
+      "id": 2
     }
   ],
-  "employees": [],
+  "employees": [
+    {
+      "name": "Sam",
+      "locationId": 2,
+      "animalId": 1,
+      "id": 1
+    }
+  ],
   "locations": [
     {
       "id": 1,
