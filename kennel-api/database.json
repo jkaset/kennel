@@ -13,6 +13,13 @@
       "locationId": 1,
       "customer": "Beef",
       "id": 2
+    },
+    {
+      "name": "Fibonacci",
+      "breed": "Greyhound",
+      "locationId": 1,
+      "customer": "Cindal",
+      "id": 3
     }
   ],
   "customers": [
