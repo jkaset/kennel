@@ -16,10 +16,9 @@ export const ApplicationViews = (props) => {
   return (
     <>
       <LocationProvider>
-        {/* Render the location list when http://localhost:3000/ */}
-        <Route exact path="/">
-          <LocationList />
-        </Route>
+        <Route path="/locations/:locationId(\d+)" render={
+          props => <LocationDetail {...props} />
+        } />
       </LocationProvider>
 
       <AnimalProvider>
@@ -50,7 +49,7 @@ export const ApplicationViews = (props) => {
         <LocationProvider>
           <AnimalProvider>
 
-          <Route exact path="/employees" render={
+            <Route exact path="/employees" render={
               props => <EmployeeList {...props} />
             } />
 
