@@ -5,7 +5,7 @@ import { AnimalContext } from "../animal/AnimalProvider"
 import { Link } from "react-router-dom"
 import "./Location.css"
 
-export const LocationList = () => {
+export const LocationList = (props) => {
     const { locations, getLocations } = useContext(LocationContext)
     const { employees, getEmployees } = useContext(EmployeeContext)
     const { animals, getAnimals } = useContext(AnimalContext)

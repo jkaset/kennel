@@ -41,6 +41,12 @@
       "locationId": 2,
       "animalId": 2,
       "id": 2
+    },
+    {
+      "name": "Jason Hicker",
+      "locationId": 1,
+      "animalId": 1,
+      "id": 3
     }
   ],
   "locations": [
