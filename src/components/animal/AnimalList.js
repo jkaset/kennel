@@ -1,40 +1,31 @@
 import React, { useContext, useEffect } from "react"
 import { AnimalContext } from "./AnimalProvider"
-import { LocationContext } from "../location/LocationProvider"
-import { CustomerContext } from "../customer/CustomerProvider"
-import { Animal } from "./Animal"
+import Animal from "./Animal"
 import "./Animal.css"
 
-export const AnimalList = (props) => {
-  const { animals, getAnimals } = useContext(AnimalContext)
-  const { locations, getLocations } = useContext(LocationContext)
-  const { customers, getCustomers } = useContext(CustomerContext)
+export const AnimalList = ({ history }) => {
+  const { getAnimals, animals } = useContext(AnimalContext)
 
+  // Initialization effect hook -> Go get animal data
   useEffect(() => {
-    console.log("AnimalList: Initial render before data")
-    getLocations()
-      .then(getCustomers)
-      .then(getAnimals)
+    getAnimals()
   }, [])
 
   return (
-    <div className="animals">
-      <h1>Pet Registration</h1>
-      <button onClick={() => props.history.push("/animals/create")}>
-        Make Appointment
-      </button>
-      <article className="animalList">
-        {animals.map(animal => {
-          const owner = customers.find(c => c.id === animal.customerId)
-          const clinic = locations.find(l => l.id === animal.locationId)
+    <>
+      <h1>Animals</h1>
 
-          return <Animal key={animal.id}
-            location={clinic}
-            customer={owner}
-            animal={animal} />
-        })}
-        </article>
-    </div>
+      <button onClick={() => history.push("/animals/create")}>
+        Make Reservation
+          </button>
+      <div className="animals">
+        {
+          animals.map(animal => {
+            return <Animal key={animal.id} animal={animal} />
+          })
+        }
+      </div>
+    </>
   )
 }
 
