@@ -7,6 +7,7 @@ import { AnimalProvider } from "./animal/AnimalProvider"
 import { AnimalList } from "./animal/AnimalList"
 import { AnimalForm } from "./animal/AnimalForm"
 import { AnimalDetails } from "./animal/AnimalDetail"
+import { AnimalSearch } from "./animal/AnimalSearch"
 import { CustomerProvider } from "./customer/CustomerProvider"
 import { CustomerList } from "./customer/CustomerList"
 import { EmployeeProvider } from "./employee/EmployeeProvider"
@@ -34,21 +35,52 @@ export const ApplicationViews = (props) => {
       <AnimalProvider>
         <LocationProvider>
           <CustomerProvider>
+            <Route exact path="/animals" render={
+              props => {
+                return <>
+                  <AnimalSearch />
+                  <AnimalList {...props} />
+                </>
+              }
+            } />
+            <Route exact path="/animals/create" render={
+              props => <AnimalForm {...props} />
+            } />
+            <Route path="/animals/:animalId(\d+)" render={
+              props => <AnimalDetails {...props} />
+            } />
+            <Route path="/animals/edit/:animalId(\d+)" render={
+              props => <AnimalForm {...props} />
+            } />
+          </CustomerProvider>
+        </LocationProvider>
+      </AnimalProvider>
+      {/* <AnimalProvider>
+        <LocationProvider>
+          <CustomerProvider>
 
             <Route exact path="/animals" render={
-              props => <AnimalList {...props} />
-            } />
+              props => <>
+                <AnimalSearch />
+                <AnimalList {...props} />
+              </>
+            }
+            />
+            
 
             <Route exact path="/animals/create" render={
               props => <AnimalForm {...props} />
             } />
 
-            <Route path="/animals/:animalId(\d+)" render={
+            <Route exact path="/animals/:animalId(\d+)" render={
               props => <AnimalDetails {...props} />
+            } />
+            <Route path="/animals/edit/:animalId(\d+)" render={
+                props => <AnimalForm {...props} />
             } />
           </CustomerProvider>
         </LocationProvider>
-      </AnimalProvider>
+      </AnimalProvider> */}
 
 
       <CustomerProvider>
