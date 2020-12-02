@@ -20,6 +20,13 @@
       "locationId": 1,
       "customer": "Cindal",
       "id": 3
+    },
+    {
+      "name": "Gifthorse",
+      "breed": "Mutt",
+      "locationId": 1,
+      "customer": "Slim Shady",
+      "id": 4
     }
   ],
   "customers": [
