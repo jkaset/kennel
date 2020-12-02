@@ -49,10 +49,12 @@ import "./Animal.css"
 export const AnimalList = ({ history }) => {
     const { animals, searchTerms, getAnimals } = useContext(AnimalContext)
 
+    const user = parseInt(localStorage.getItem("kennel_customer"))
+    //console.log(user)
     /*
         Since you are no longer ALWAYS going to be displaying all animals
     */
-    const [ filteredAnimals, setFiltered ] = useState([])
+    const [filteredAnimals, setFiltered] = useState([])
 
     useEffect(() => {
         getAnimals()
@@ -74,6 +76,24 @@ export const AnimalList = ({ history }) => {
         }
     }, [searchTerms, animals])
 
+
+//     return (
+//         <>
+//             <h1>Animals</h1>
+
+//             <button onClick={() => history.push("/animals/create")}>
+//                 Make Reservation
+//                 </button>
+//             <div className="animals">
+//                 {
+//                     filteredAnimals.map(animal => {
+//                         return <Animal key={animal.id} animal={animal} />
+//                     })
+//                 }
+//             </div>
+//         </>
+//     )
+// }
     return (
         <>
             <h1>Animals</h1>
@@ -84,7 +104,10 @@ export const AnimalList = ({ history }) => {
             <div className="animals">
                 {
                     filteredAnimals.map(animal => {
-                        return <Animal key={animal.id} animal={animal} />
+                        if (animal.customerId === user) {
+
+                            return <Animal key={animal.id} animal={animal} />
+                        }
                     })
                 }
             </div>
