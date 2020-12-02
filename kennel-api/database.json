@@ -5,14 +5,8 @@
       "breed": "Greyhound",
       "locationId": 1,
       "customerId": 1,
+      "treatment": "",
       "id": 1
-    },
-    {
-      "name": "Gifthorse",
-      "breed": "Weinerdog",
-      "locationId": 1,
-      "customerId": 1,
-      "id": 2
     }
   ],
   "customers": [
