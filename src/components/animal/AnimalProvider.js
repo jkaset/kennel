@@ -24,6 +24,7 @@ const addAnimal = animal => {
 }
 
 const getAnimalById = (id) => {
+    console.log(id)
     return fetch(`http://localhost:8088/animals/${ id }?_expand=location&_expand=customer`)
         .then(res => res.json())
 }

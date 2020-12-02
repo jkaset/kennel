@@ -34,7 +34,7 @@ export const AnimalForm = (props) => {
                 name: name.current.value,
                 breed: breed.current.value,
                 locationId,
-                customer: customer.current.value
+                customerId: parseInt(localStorage.getItem("kennel_customer"))
             })
                 .then(() => props.history.push("/animals"))
         }
@@ -68,12 +68,12 @@ export const AnimalForm = (props) => {
                     </select>
                 </div>
             </fieldset>
-            <fieldset>
+            {/* <fieldset>
                 <div className="form-group">
                     <label htmlFor="animalCustomer">Your name: </label>
                     <input type="text" id="animalCustomer" ref={customer} required autoFocus className="form-control" placeholder="Joe Walsh" />
                 </div>
-            </fieldset>
+            </fieldset> */}
 
             <button type="submit"
                 onClick={evt => {
