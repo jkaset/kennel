@@ -15,6 +15,30 @@
       "locationId": 2,
       "treatment": "dont Brush him ok",
       "customerId": 1
+    },
+    {
+      "name": "Chico",
+      "breed": "Chihuahua",
+      "locationId": 1,
+      "treatment": "nervous",
+      "customerId": 1,
+      "id": 3
+    },
+    {
+      "name": "Tutti Fruti",
+      "breed": "Husky",
+      "locationId": 2,
+      "treatment": "he will bit you",
+      "customerId": 1,
+      "id": 4
+    },
+    {
+      "name": "Jamble",
+      "breed": "Greyhound",
+      "locationId": 2,
+      "treatment": "let it lie",
+      "customerId": 1,
+      "id": 5
     }
   ],
   "customers": [
@@ -49,6 +73,24 @@
       "locationId": 1,
       "animalId": 1,
       "id": 4
+    },
+    {
+      "name": "Grace",
+      "locationId": 2,
+      "animalId": 5,
+      "id": 5
+    },
+    {
+      "name": "Sindy",
+      "locationId": 2,
+      "animalId": 4,
+      "id": 6
+    },
+    {
+      "name": "Vincent",
+      "locationId": 1,
+      "animalId": 3,
+      "id": 7
     }
   ],
   "locations": [
