@@ -1,28 +1,20 @@
 {
   "animals": [
     {
-      "name": "Joss",
-      "breed": "Greyhound",
+      "name": "Digger",
+      "breed": "Blue heeler",
       "locationId": 1,
+      "treatment": "Pat it",
       "customerId": 1,
-      "treatment": "",
       "id": 1
     },
     {
-      "name": "Befth",
-      "breed": "Australian Shep",
-      "locationId": 1,
-      "treatment": "nice",
-      "customerId": 1,
-      "id": 2
-    },
-    {
-      "name": "Jorb",
-      "breed": "Hound",
-      "locationId": 1,
-      "treatment": "pat it",
-      "customerId": 1,
-      "id": 3
+      "id": 2,
+      "name": "Benji",
+      "breed": "Terrier",
+      "locationId": 2,
+      "treatment": "dont Brush him ok",
+      "customerId": 1
     }
   ],
   "customers": [

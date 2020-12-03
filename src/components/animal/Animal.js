@@ -22,6 +22,7 @@ export default ({ animal }) => (
         {animal.name}
       </Link>
     </h3>
-    <div className="animal__breed">{animal.breed}</div>
+    <div className="animal__breed">breed: {animal.breed}</div>
+    <div className="animal__treatment">treatment: {animal.treatment}</div>
   </section>
 )
