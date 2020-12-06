@@ -20,6 +20,12 @@ import { BrowserRouter as Router } from "react-router-dom"
 import { Kennel } from "./components/Kennel"
 import "./index.css"
 
+
+import $ from 'jquery';
+import Popper from 'popper.js';
+import 'bootstrap/dist/js/bootstrap.bundle.min';
+
+
 // ReactDOM.render(
 //   <React.StrictMode>
 //     <Kennel />

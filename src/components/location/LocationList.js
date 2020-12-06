@@ -4,6 +4,7 @@ import { LocationContext } from "./LocationProvider"
 import { AnimalContext } from "../animal/AnimalProvider"
 import { Link } from "react-router-dom"
 import "./Location.css"
+import { LocationSearch } from "./LocationSearch"
 
 export const LocationList = (props) => {
     const { locations, getLocations } = useContext(LocationContext)
@@ -16,6 +17,7 @@ export const LocationList = (props) => {
 
     return (
         <div className="locations">
+            <LocationSearch btnText={"search locations"}/>
             {
                 locations.map(location => {
                     location.employees = employees.filter(e => e.locationId === location.id)

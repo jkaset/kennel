@@ -2,6 +2,10 @@ import React, { useContext, useEffect } from "react"
 import { EmployeeContext } from "./EmployeeProvider"
 import { Link } from "react-router-dom"
 import "./Employee.css"
+import Button from 'react-bootstrap/Button';
+//import ButtonGroup from "react-bootstrap/ButtonGroup";
+//import Chart from 'chart.js';
+
 
 export const EmployeeList = props => {
   const { employees, getEmployees } = useContext(EmployeeContext)
@@ -13,10 +17,9 @@ export const EmployeeList = props => {
   return (
     <div className="employees">
       <h1>Employees</h1>
-
-      <button onClick={() => props.history.push("/employees/create")}>
+      <Button color="secondary" onClick={() => props.history.push("/employees/create")}>
         Add Employee
-            </button>
+      </Button>
 
       <article className="employeeList">
         {
@@ -29,5 +32,6 @@ export const EmployeeList = props => {
         }
       </article>
     </div>
+    
   )
 }
