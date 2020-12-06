@@ -5,9 +5,15 @@ import { NavBar } from "./nav/NavBar"
 import { Login } from "./auth/Login"
 import { Register } from "./auth/Register"
 import "./Kennel.css"
+import { Logo } from "./nav/Logo"
+import 'bootstrap/dist/css/bootstrap.min.css';
+//import Button from 'react-bootstrap/Button'
+//import './App.scss';
 
 export const Kennel = () => (
     <>
+
+        <Logo />
         <Route render={() => {
             if (localStorage.getItem("kennel_customer")) {
                 return (
